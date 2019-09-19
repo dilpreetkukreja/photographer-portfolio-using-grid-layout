@@ -1,0 +1,309 @@
+		:root{
+			font-size:62.5%;
+		}
+
+		*{
+			box-sizing: border-box;
+			line-height: 1.5;
+			/*border:1px solid #A9A9A9;*/
+		}
+		.border-bottom{
+			border-bottom:2px solid rgba(229, 90, 84, 1);
+			width:8rem	
+		}
+		/* ----wrapper -----*/
+		.wrapper{
+			display:grid;
+			grid-template-rows: 100vh auto auto;
+			font-size:1.6rem;
+		}
+		/*      jumbotron -------*/
+		.navigation{
+			display:flex;
+			font-size:2rem;
+			padding-top: 2rem;
+		}
+		.logo{
+			padding-left:4rem;
+			font-weight: bold;
+
+		}
+		.nav-menu{
+			margin-left: auto;
+			padding-right: 4rem;
+		}
+		.jumbotron{
+			position:relative;
+			background-image: url("images/jumbotron-image.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			position:relative;
+			font-family: 'Oxygen', sans-serif;
+			color:#ffffff;
+			z-index:-2;
+		}
+		.jumbotron::after, .awards-section::after{
+			position:absolute;
+			top:0;
+			width:100%;
+			height:100%;
+			content:"";
+			background-color: rgba(42,43,47,.6);
+			display:block;
+			z-index:-1;
+		}
+		.jumbotron-content{
+			top:30%;
+			position:absolute;
+			z-index:1;
+			padding:4rem;
+		}
+		.jumbotron-name{
+			position:relative;
+			font-size:4rem;
+			color: rgba(255,255,255,1);
+
+		}
+		.jumbotron-desc{
+			font-size:2rem;
+
+		}
+		.link{
+			font-size:1.5rem;
+			color:inherit;
+			text-decoration: none;
+		}
+		
+		.jumbotron .border-bottom{
+			margin-top: 1.5rem;
+		}
+		
+		/*---- About me---------*/
+
+		.About-me{
+			display: grid;
+			grid-template-areas: "interests ctts";
+		}
+		.about-me-interests{
+			grid-area:interests;
+			display:grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			
+		}
+		.about-me-interests>div{
+			padding: 3rem;
+			background-color: rgb(0,0,0,0.8);
+			color:#ffffff;
+			font-family: 'Merriweather Sans', sans-serif;
+			font-size:1.2rem;
+
+		}
+		.about-me-interests>div h1{
+			text-transform: uppercase;
+		}
+		.about-me-content{
+			grid-area:ctts;
+
+			padding:3rem;
+		}
+		.about-me-content>*{
+			line-height: 2rem;
+			font-family: 'Merriweather Sans', sans-serif;
+		}
+		.about-me-content-title{
+			position: relative;
+			font-family: 'Oxygen', sans-serif;
+			font-size:2.8rem;	
+
+		}
+		/*------- awards --------*/
+		.awards-section{
+			position: relative;
+			background-image: url("images/rewards4.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			z-index:-1;
+			color:#ffffff;	
+
+		}
+		.awards-section>h1, .awards-section div.border-bottom{
+			padding-left:4rem;
+			font-family: 'Oxygen', sans-serif;
+			font-size:2.8rem;
+		} 
+
+		.awards-section div.border-bottom{
+			margin-left: 4rem;
+		}
+		
+		.awards{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+		}
+		.award{
+			padding-left:8rem;
+			padding-right:8rem;
+			padding-bottom:8rem;
+
+		
+		}
+		.award h1{
+			font-family: 'Oxygen', sans-serif;
+			font-size:2.4rem;
+		}
+		.award p{
+			font-family: 'Merriweather Sans', sans-serif;
+			font-size:1.6rem;
+		}
+		/*----- Contact me ---- */
+
+		.contact-me{
+			background-image: url("images/contact-me.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			display:grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: ". contactwrapper";
+			align-content: center;
+		}
+		.contact-wrapper{
+			grid-area: contactwrapper;
+			margin-top:130px;
+			margin-bottom:130px;
+			margin-right: 60px;
+
+		}
+		.contact-me h1, .contact-me div.border-bottom{
+			padding-left:4rem;
+			font-family: 'Oxygen', sans-serif;
+			font-size:2.8rem;
+		} 
+		.contact-me div.border-bottom{
+			margin-left: 4rem;
+		}
+		.contact-me  p{
+			padding-left:8rem;
+			padding-right:8rem;
+			font-family: 'Merriweather Sans', sans-serif;
+
+		}
+		.contact-details{
+			display: flex;
+			margin-top:4rem;
+
+		}
+		.contact-details>div{
+			flex:1 1 0;
+		}
+		.detail{
+			display: flex;
+			flex-direction: column;
+			align-items:center;
+		}
+		.detail i{
+			color:rgba(229, 90, 84, 1);;
+		}
+		/* ------footer --------*/
+		footer{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #eee;
+			background-color: rgba(0,0,0,0.7);
+			height: 100px
+		}
+		footer i{
+			padding:1rem;
+		}
+		/* Style the tab */
+		.tabcontent{
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+			grid-auto-rows:400px;
+		}
+		.tabcontent img{
+			width:100%;
+			height:100%;
+			object-fit: cover;
+
+		}
+
+
+		.tab {
+		  overflow: hidden;
+		  border: 1px solid #ccc;
+		  background-color: rgba(0,0,0,0.7);
+		  display:flex;
+		}
+
+		/* Style the buttons that are used to open the tab content */
+		.tab button {
+		  background-color: transparent;
+		  border: none;
+		  outline: none;
+		  cursor: pointer;
+		  padding: 14px 16px;
+		  transition: 0.3s;
+		  font-size:1.4rem;
+		  font-family: 'Oxygen', sans-serif; 
+		  color:#ffffff;
+		  font-weight: bold
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+		  background-color: rgba(229, 90, 84, 1);
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+		  background-color: rgba(229, 90, 84, 1);
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+		  display: none;
+		  
+		  border: 1px solid #ccc;
+		  border-top: none;
+		}
+		.tabcontent {
+		  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+		}
+
+		/* Go from zero to full opacity */
+		@keyframes fadeEffect {
+		  from {opacity: 0;}
+		  to {opacity: 1;}
+		}
+
+		@media screen and (max-width: 768px){
+			.About-me{
+				grid-template-areas: "interests"
+									 "ctts";
+			}
+			.award{
+				padding-bottom: 0;
+			}
+			.contact-me  p{
+				padding:1rem;
+			}
+			.contact-me{
+				grid-template-columns: 1fr;
+				grid-template-areas: "contactwrapper";
+			}
+			.contact-wrapper{
+				margin-left: 20rem;
+			}
+			
+		}
+
+
+
+
+
+
+
