@@ -83,6 +83,7 @@
 
 		.About-me{
 			display: grid;
+			grid-template-columns: 1fr 1fr;
 			grid-template-areas: "interests ctts";
 		}
 		.about-me-interests{
@@ -165,7 +166,7 @@
 			background-size: cover;
 			background-position: center;
 			display:grid;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr 3fr;
 			grid-template-areas: ". contactwrapper";
 			align-content: center;
 		}
@@ -174,6 +175,7 @@
 			margin-top:130px;
 			margin-bottom:130px;
 			margin-right: 60px;
+			margin-left: 15rem;
 
 		}
 		.contact-me h1, .contact-me div.border-bottom{
@@ -280,25 +282,62 @@
 		  to {opacity: 1;}
 		}
 
-		@media screen and (max-width: 768px){
+		@media only screen and (max-width:768px) {
 			.About-me{
+				grid-gap:30px;
+				grid-template-columns: 1fr;
 				grid-template-areas: "interests"
 									 "ctts";
 			}
 			.award{
 				padding-bottom: 0;
 			}
-			.contact-me  p{
+			.contact-me p{
 				padding:1rem;
 			}
+			.contact-me{
+				grid-template-columns: 1fr 3fr;
+				grid-template-areas: ". contactwrapper";
+			}
+			
+			
+		}
+		@media only screen and (max-width:800px) {
+			.contact-me{
+				grid-template-columns: 1fr;
+				grid-template-areas: "contactwrapper";
+
+			}
+			
+		}
+		@media only screen and (max-width:662px) {
 			.contact-me{
 				grid-template-columns: 1fr;
 				grid-template-areas: "contactwrapper";
 			}
 			.contact-wrapper{
-				margin-left: 20rem;
+				margin-left: 9rem;
 			}
-			
+		}
+		@media only screen and (max-width:600px) {
+			.contact-me{
+				grid-template-columns: 1fr;
+				grid-template-areas: "contactwrapper";
+			}
+			.contact-wrapper{
+				margin-left: 6rem;
+			}
+		}
+		@media only screen and (max-width:375px) {
+			.contact-me{
+				background-image:url("images/contact-me.jpg");
+				background-position: contain;
+				grid-template-columns: 1fr;
+				grid-template-areas: "contactwrapper";
+			}
+			.contact-wrapper{
+				margin-left: 1rem;
+			}
 		}
 
 
