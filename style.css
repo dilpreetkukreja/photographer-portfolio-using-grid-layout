@@ -48,6 +48,7 @@
 			top:0;
 			width:100%;
 			height:100%;
+			bottom:0;
 			content:"";
 			background-color: rgba(42,43,47,.6);
 			display:block;
@@ -83,7 +84,7 @@
 		.tabcontent{
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			grid-auto-rows:400px;
+			grid-auto-rows:300px;
 		}
 		.tabcontent img{
 			width:100%;
@@ -94,10 +95,11 @@
 
 
 		.tab {
-		  overflow: hidden;
+		  /*overflow: hidden;*/
 		  border: 1px solid #ccc;
 		  background-color: rgba(0,0,0,0.7);
 		  display:flex;
+
 		}
 
 		/* Style the buttons that are used to open the tab content */
@@ -111,7 +113,7 @@
 		  font-size:1.4rem;
 		  font-family: 'Oxygen', sans-serif; 
 		  color:#ffffff;
-		  font-weight: bold
+		  font-weight: bold;
 		}
 
 		/* Change background color of buttons on hover */
@@ -268,6 +270,12 @@
 			line-height: 2rem;
 			font-family: 'Merriweather Sans', sans-serif;
 		}
+		@media screen and (max-width:786px){
+			.about-me-content p{
+				font-size: 1.2rem;
+			}
+
+		}
 		.about-me-content-title{
 			position: relative;
 			font-family: 'Oxygen', sans-serif;
@@ -288,7 +296,7 @@
 		.awards-section>h1, .awards-section div.border-bottom{
 			padding-left:4rem;
 			font-family: 'Oxygen', sans-serif;
-			font-size:2.8rem;
+			font-size:2.4rem;
 		} 
 
 		.awards-section div.border-bottom{
@@ -297,7 +305,14 @@
 		
 		.awards{
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+		}
+		@media screen and (max-width:786px){
+			.awards{
+
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		}
+
 		}
 		.award{
 			padding-left:8rem;
@@ -308,11 +323,11 @@
 		}
 		.award h1{
 			font-family: 'Oxygen', sans-serif;
-			font-size:2.4rem;
+			font-size:2rem;
 		}
 		.award p{
 			font-family: 'Merriweather Sans', sans-serif;
-			font-size:1.6rem;
+			font-size:1.2rem;
 		}
 		/*----- Contact me ---- */
 
@@ -414,14 +429,20 @@
 				z-index:2;
 			}
 			.contact-wrapper p,.contact-wrapper h1, .contact-wrapper div.border-bottom {
-				padding-left:3rem; 
+				padding-left:0rem; 
 				padding-right:3rem;
 			}
 			.contact-wrapper div.border-bottom {
-				margin-left: 3rem;
+				margin-left: 0rem;
 			}
 			.contact-details{
 
+			}
+			.contact-wrapper p{
+				font-size:1rem;
+			}
+			.contact-wrapper i{
+				font-size:1.5rem;
 			}
 
 			
