@@ -7,6 +7,9 @@
 			line-height: 1.5;
 			/*border:1px solid #A9A9A9;*/
 		}
+		body{
+			margin:0;
+		}
 		.border-bottom{
 			border-bottom:2px solid rgba(229, 90, 84, 1);
 			width:8rem	
@@ -34,7 +37,7 @@
 		}
 		.jumbotron{
 			position:relative;
-			background-image: url("images/jumbotron-image.jpg");
+			background-image: url("images/profile_photo.jpg");
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
